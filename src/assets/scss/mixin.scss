@@ -1,0 +1,25 @@
+@mixin cover-bg($path) {
+    background: url($path);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin contain-bg($path) {
+    background: url($path);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@function tr($px){
+    @return $px/240*1rem;
+}
+
+@function tw($px) {
+    @return $px/750*100vw;
+}
+
+@function tv($px) {
+    @return $px/375*100vh;
+}
+
+@function tem($px) {
+    @return $px/137*1em;
+}
