@@ -96,7 +96,7 @@
                 const f = (target[`new_${target.id}`] - target[`old_${target.id}`]) * 30 / window.innerHeight;
                 target[`pos_${target.id}`] = target[`o_d_${target.id}`] + f;
                 target.style['-webkit-transform'] = `translate3d(0,${target[`pos_${target.id}`]}em,0)`;
-                    target.setAttribute('top', `${target[`pos_${target.id}`]}em`);
+                target.setAttribute('top', `${target[`pos_${target.id}`]}em`);
                 if (e.targetTouches[0].screenY < 1) {
                     this.gearTouchEnd(e);
                 }
@@ -132,7 +132,7 @@
                 let stopGear = false;
 
                 function setDuration() {
-                    target.style.webkitTransitionDuration = target.style.transitionDuration = '100ms';
+                    target.style.webkitTransitionDuration = target.style.transitionDuration = '2ms';
                     stopGear = true;
                 }
 

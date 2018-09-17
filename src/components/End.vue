@@ -83,9 +83,7 @@
             this.type = query.type
             this.estate = query.estate;
             this.estateValue = query.estateValue;
-            // this.average = window.stationData[this.line][this.station][this.type][this.style + 'room'];
             this.total = (this.size * this.estateValue).toFixed(2);
-            // this.total = (this.average * this.size).toFixed(2);
 
             setTimeout(() => {
                 this.paperActive = true;
@@ -190,7 +188,7 @@
         }
 
         .paper {
-            @include contain-bg('~@img/paper.png');
+            @include cover-bg('~@img/paper.png');
             background-size: 100% 100%;
             background-position: center;
             width: 90%;
@@ -202,14 +200,14 @@
             transition: transform .5s ease-in-out;
 
             .info-box {
-                width:100%;
+                width:50%;
                 height: 36%;
+                margin-left: 9%;
             }
             .info {
-                width: 50%;
+                width: 100%;
                 position: relative;
-                top: .36rem;
-                left: 8%;
+                top: 35%;
                 text-align: center;
                 font-size: tw(32);
                 @media only screen
@@ -224,7 +222,6 @@
             }
             .room {
                 font-size: tw(30);
-                top: tw(100);
                 span {
                     background: linear-gradient(to bottom, transparent, transparent 40%, rgb(239, 237, 177) 40%, rgb(239, 237, 177))
                 }
@@ -275,7 +272,7 @@
 
                 .desc2 {
                     margin-top: tw(54);
-                    font-size: tw(22);
+                    font-size: tw(24);
                     font-family: 'YuantiR';
                     line-height: tw(26);
                     color: rgb(152, 152, 152);
@@ -287,7 +284,6 @@
             flex: 1;
             display: flex;
             align-items: center;
-            height: auto;
             width: 100%;
             height: 15%;
             justify-content: center;
@@ -323,7 +319,7 @@
         }
         .bottom {
             //flex: 1 1 50%;
-            font-size: tr(12);
+            font-size: tr(22);
             color: rgb(152, 152, 152);
             position: fixed;
             bottom: tw(20);
@@ -342,7 +338,9 @@
             }
             .bottom_text {
                 flex: 0 0 100%;
+                font-size: tr(20);
                 font-family: 'YuantiR';
+                font-size: tr(22);
             }
         }
     }

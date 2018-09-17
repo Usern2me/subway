@@ -154,7 +154,8 @@
                 transform: scale(0.9, 0.9);
             }
             .item:active {
-                transition: all .2s ease-in-out;
+                transition: all .3s ease-in-out;
+                transform: scale3d(1.1,1.1,0);
             }
             .middleItem {
                 flex: 0 0 27%;
@@ -191,7 +192,7 @@
         }
 
         .desc2 {
-            font-size: tr(20);
+            font-size: tr(22);
             font-family: 'YuantiR';
             line-height: tr(22);
             color: rgb(166, 157, 166);
